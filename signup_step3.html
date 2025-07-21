@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tug‘ilgan yilingiz</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    input, button {
+      width: 100%; padding: 10px; margin-top: 10px;
+      border-radius: 6px; border: 1px solid #ccc;
+    }
+    button {
+      background: #007bff; color: white; border: none; font-size: 16px;
+    }
+    button:hover { background: #0056b3; }
+    .error { color: red; display: none; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>3-qadam: Tug‘ilgan yilingizni kiriting</h2>
+
+  <form action="signup_step4.html" method="GET" onsubmit="return checkAge()">
+    <input type="number" id="year" name="year" placeholder="Masalan: 2006" required>
+    <div class="error" id="errorMsg">❌ Kechirasiz, 14 yoshdan kichik foydalanuvchilar saytga kira olmaydi.</div>
+    <button type="submit">Davom etish</button>
+  </form>
+
+  <script>
+    function checkAge() {
+      const year = parseInt(document.getElementById('year').value);
+      const currentYear = new Date().getFullYear();
+      const age = currentYear - year;
+      if (age < 14) {
+        document.getElementById('errorMsg').style.display = 'block';
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+</html>
