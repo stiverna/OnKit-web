@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil sahifasi</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    .profile-pic {
+      width: 120px; height: 120px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid #673ab7; margin: auto; display: block;
+    }
+    input[type="file"] { margin: 10px 0; display: block; }
+    .field { margin-bottom: 10px; }
+    label { display: block; margin-bottom: 5px; }
+    input[type="text"] {
+      width: 100%; padding: 10px;
+      border: 1px solid #ccc; border-radius: 6px;
+    }
+    button {
+      width: 100%; padding: 12px;
+      background: #673ab7; color: white;
+      border: none; border-radius: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>👤 Mening Profilim</h2>
+
+  <img src="https://via.placeholder.com/120" class="profile-pic" id="preview">
+
+  <label>📸 Rasm yuklang (faqat old kamera yoki galereya):</label>
+  <input type="file" accept="image/*" capture="user" onchange="previewImage(event)">
+
+  <div class="field">
+    <label>📝 Ismingiz:</label>
+    <input type="text" placeholder="Ism yozing">
+  </div>
+
+  <div class="field">
+    <label>🧾 Bio (o‘zingiz haqingizda qisqacha):</label>
+    <input type="text" placeholder="Men haqida...">
+  </div>
+
+  <button onclick="alert('Saqlash tugmasi hali ulanmagan 🙂')">💾 Saqlash</button>
+  <button onclick="window.location.href='edit_profile.html'">✏️ Profilni tahrirlash</button>
+
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function(){
+        document.getElementById('preview').src = reader.result;
+      }
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
+
+</body>
+</html>
