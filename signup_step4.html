@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinsni tanlang</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    .option {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #673ab7;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #512da8;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>4-qadam: Jinsingizni tanlang</h2>
+
+  <form action="signup_success.html" method="GET">
+    <label class="option">
+      <input type="radio" name="gender" value="male" required> Erkak
+    </label>
+    <label class="option">
+      <input type="radio" name="gender" value="female"> Ayol
+    </label>
+    <label class="option">
+      <input type="radio" name="gender" value="other"> Hali aniq emas
+    </label>
+
+    <button type="submit">Davom etish</button>
+  </form>
+
+</body>
+</html>
