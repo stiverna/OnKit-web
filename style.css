@@ -1,0 +1,27 @@
+body {
+  transition: 0.3s;
+}
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+#sideMenu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#sideMenu button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  border: none;
+  background: #673ab7;
+  color: white;
+  border-radius: 5px;
+}
