@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profilni tahrirlash</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 20px; }
+    .field { margin-bottom: 15px; }
+    label { display: block; margin-bottom: 5px; }
+    input {
+      width: 100%; padding: 10px;
+      border: 1px solid #ccc; border-radius: 6px;
+    }
+    input[disabled] {
+      background: #f3f3f3; color: #888;
+    }
+    button {
+      width: 100%; padding: 12px;
+      background: #009688; color: white;
+      border: none; border-radius: 6px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>⚙️ Profilni tahrirlash</h2>
+
+  <div class="field">
+    <label>Email:</label>
+    <input type="email" placeholder="Yangi email kiriting">
+  </div>
+
+  <div class="field">
+    <label>Telefon raqam:</label>
+    <input type="tel" placeholder="+998...">
+  </div>
+
+  <div class="field">
+    <label>Username (o‘zgartirib bo‘lmaydi):</label>
+    <input type="text" value="foydalanuvchi123" disabled>
+  </div>
+
+  <div class="field">
+    <label>Yosh (o‘zgartirib bo‘lmaydi):</label>
+    <input type="text" value="16 yosh" disabled>
+  </div>
+
+  <div class="field">
+    <label>Jins (o‘zgartirib bo‘lmaydi):</label>
+    <input type="text" value="Male" disabled>
+  </div>
+
+  <button onclick="alert('Ma’lumotlar saqlandi!')">💾 Saqlash</button>
+  <button onclick="window.location.href='profile.html'">⬅️ Orqaga</button>
+
+</body>
+</html>
