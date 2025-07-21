@@ -4,8 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OnKit - Xush kelibsiz</title>
+  <link rel="stylesheet" href="style.css">
+<script src="menu.js" defer></script>
   <style>
-    body {
+    body
+   <button onclick="toggleMenu()">☰</button>
+<div id="sideMenu">
+  <button onclick="toggleTheme()">Dark/Light</button>
+  <button onclick="window.location.href='profile.html'">Profil</button>
+  <button onclick="alert('Log out qilindi')">Log out</button>
+  <button onclick="setLanguage('UZ')">🇺🇿 Uzbek</button>
+  <button onclick="setLanguage('RU')">🇷🇺 Rus</button>
+  <button onclick="setLanguage('EN')">🇬🇧 English</button>
+  <button onclick="alert('Do‘stlarga ulashish funktsiyasi hozircha tayyor emas')">Taklif qilish</button>
+</div> {
       font-family: sans-serif;
       text-align: center;
       background: #f2f2f2;
